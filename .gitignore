@@ -1,3 +1,10 @@
-// Visit https://github.com/github/gitignore to get a gitignore for your project.
-
-.env
+*-debug.log
+*-error.log
+/.nyc_output
+/dist
+/lib
+/package-lock.json
+/tmp
+/yarn.lock
+node_modules
+oclif.manifest.json
