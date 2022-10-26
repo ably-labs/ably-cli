@@ -19,11 +19,13 @@
   "dependencies": {
     "@oclif/core": "^1.19.1",
     "@oclif/plugin-help": "^5",
-    "@oclif/plugin-plugins": "^2.1.4"
+    "@oclif/plugin-plugins": "^2.1.4",
+    "fs-extra": "^10.1.0"
   },
   "devDependencies": {
     "@oclif/test": "^2.2.4",
     "@types/chai": "^4",
+    "@types/fs-extra": "^9.0.13",
     "@types/mocha": "^9.0.0",
     "@types/node": "^16.11.68",
     "chai": "^4",
