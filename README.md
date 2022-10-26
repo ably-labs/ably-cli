@@ -1,11 +1,11 @@
 Ably CLI
 =================
 
-[![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
+[![ably-cli](https://img.shields.io/badge/ably-cli-brightgreen.svg)](https://oclif.io)
 [![Version](https://img.shields.io/npm/v/ably-cli.svg)](https://npmjs.org/package/ably-cli)
-[![CircleCI](https://circleci.com/gh/ably-labs/ably-cli/tree/main.svg?style=shield)](https://circleci.com/gh/oclif/hello-world/tree/main)
-[![Downloads/week](https://img.shields.io/npm/dw/oclif-hello-world.svg)](https://npmjs.org/package/oclif-hello-world)
-[![License](https://img.shields.io/npm/l/oclif-hello-world.svg)](https://github.com/oclif/hello-world/blob/main/package.json)
+[![CircleCI](https://circleci.com/gh/ably-labs/ably-cli/tree/main.svg?style=shield)](https://circleci.com/gh/oclif/ably-cli/tree/main)
+[![Downloads/week](https://img.shields.io/npm/dw/ably-cli.svg)](https://npmjs.org/package/ably-cli)
+[![License](https://img.shields.io/npm/l/ably-cli.svg)](https://github.com/ably-labs/ably-cli/blob/main/package.json)
 
 // This is a template repository to be used for all Ably Labs demos, tools &amp; proof of concepts. Follow these steps to so this repo is easy to use for visitors & maintainers.
 
