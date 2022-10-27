@@ -1,7 +1,7 @@
 import {Flags} from '@oclif/core'
 import CommandWithGlobalConfig from '../command-with-global-config'
 
-export default class Update extends CommandWithGlobalConfig {
+export default class Set extends CommandWithGlobalConfig {
 	static description = 'Update the control key used by the Ably CLI'
 
 	static examples = [`$ ably access set --accountid <value> --controlkey <value>
@@ -16,7 +16,7 @@ static hidden = false
   }
 
   async run(): Promise<void> {
-    const {flags} = await this.parse(Update)
+    const {flags} = await this.parse(Set)
 
     this.globalConfig.accountId = flags.accountid
     this.globalConfig.controlApiToken = flags.controlkey
