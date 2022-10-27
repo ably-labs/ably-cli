@@ -2,9 +2,9 @@ import {Flags} from '@oclif/core'
 import CommandWithGlobalConfig from '../command-with-global-config'
 
 export default class Update extends CommandWithGlobalConfig {
-	static description = 'Update Ably CLI configuration'
+	static description = 'Update the control key used by the Ably CLI'
 
-	static examples = [`$ ably config:update --accountid --controlkey
+	static examples = [`$ ably access set --accountid <value> --controlkey <value>
 `]
 
 static hidden = false
@@ -21,7 +21,7 @@ static hidden = false
     this.globalConfig.accountId = flags.accountid
     this.globalConfig.controlApiToken = flags.controlkey
 
-    this.log(`Control API to be set to ${flags.accountid} ${flags.controlkey}`)
+    this.log(`Control API key to be set to ${flags.accountid} ${flags.controlkey}`)
     await this.saveGlobalConfig()
   }
 }
