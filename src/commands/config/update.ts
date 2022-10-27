@@ -7,6 +7,8 @@ export default class Update extends CommandWithGlobalConfig {
 	static examples = [`$ ably config:update --accountid --controlkey
 `]
 
+static hidden = false
+
   static flags = {
     ...CommandWithGlobalConfig.flags,
     accountid: Flags.string({description: 'The account ID', required: true}),

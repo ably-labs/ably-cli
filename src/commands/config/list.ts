@@ -12,6 +12,8 @@ export default class List extends CommandWithGlobalConfig {
     ...CommandWithGlobalConfig.flags,
   }
 
+  static hidden = false
+
   async run(): Promise<void> {
     if (this.globalConfig === undefined) {
       this.log('Configuration not set')

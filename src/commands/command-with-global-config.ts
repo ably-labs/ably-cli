@@ -13,6 +13,8 @@ export default abstract class CommandWithGlobalConfig extends Command {
     help: Flags.help(),
   }
 
+  static hidden = true
+
   flags: {
     [name: string]: any
   } = {}
