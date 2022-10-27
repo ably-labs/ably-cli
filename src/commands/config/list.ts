@@ -17,6 +17,7 @@ export default class List extends CommandWithGlobalConfig {
       this.log('Configuration not set')
     } else {
       this.log(`Ably CLI configuration:
+        accountId: ${this.globalConfig.accountId}, 
         controlApiToken: ${this.globalConfig.controlApiToken}
       `)
     }
