@@ -1,5 +1,6 @@
 import {CliUx, Flags} from '@oclif/core'
 import {AblyApp} from '../../helpers/ably-app'
+import {ablyAppColumns} from '../../helpers/ably-app-table-columns'
 import CommandWithGlobalConfig from '../command-with-global-config'
 
 export default class Create extends CommandWithGlobalConfig {
@@ -28,34 +29,14 @@ export default class Create extends CommandWithGlobalConfig {
       this.log('Configuration not set')
     } else {
       const {flags} = await this.parse(Create)
-      const app = await this.ablyControlApi!.createApp(flags.name!, flags.tlsonly)
+      const app = await this.ablyControlApi!.getOrCreateApp(flags.name!, flags.tlsonly)
       const apps: AblyApp[] = [app]
-      CliUx.ux.table(apps as Record<string, any>[], {
-        name: {
-          header: 'Name',
-          minWidth: 25,
-        },
-        id: {
-          header: 'ID',
-          minWidth: 10,
-        },
-        status: {
-          header: 'Status',
-          minWidth: 10,
-        },
-        tlsOnly: {
-          header: 'TLS Only',
-          minWidth: 10,
-        },
-        created: {
-          header: 'Created',
-          get: row => new Date(row.created).toUTCString(),
-          minWidth: 10,
-        },
-      }, {
-        printLine: this.log.bind(this),
-        ...flags,
-      })
+      CliUx.ux.table(apps as Record<string, any>[],
+        ablyAppColumns,
+        {
+          printLine: this.log.bind(this),
+          ...flags,
+        })
     }
   }
 }

@@ -57,6 +57,7 @@ export class AblyControlApi {
     )
 
     if (app) {
+      console.log('This app already exists and will not be created. You can use `ably apps update` to update an existing app.')
       return app
     }
 
