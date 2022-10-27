@@ -1,16 +1,25 @@
-import {CliUx} from '@oclif/core'
+import {CliUx, Flags} from '@oclif/core'
+import {AblyApp} from '../../helpers/ably-app'
 import CommandWithGlobalConfig from '../command-with-global-config'
 
-export default class List extends CommandWithGlobalConfig {
-  static description = 'List the Ably Applications'
+export default class Create extends CommandWithGlobalConfig {
+  static description = 'Create an Ably Application'
 
   static examples = [
-    `$ ably apps:list
+    `$ ably apps:create
 `,
   ]
 
   static flags = {
     ...CommandWithGlobalConfig.flags,
+    name: Flags.string({
+      required: true,
+      summary: 'Name of the Ably app',
+    }),
+    tlsonly: Flags.boolean({
+      required: false,
+      summary: 'Only use TLS connections',
+    }),
     ...CliUx.ux.table.flags(),
   }
 
@@ -18,8 +27,9 @@ export default class List extends CommandWithGlobalConfig {
     if (this.globalConfig === undefined) {
       this.log('Configuration not set')
     } else {
-      const {flags} = await this.parse(List)
-      const apps = await this.ablyControlApi!.listApps()
+      const {flags} = await this.parse(Create)
+      const app = await this.ablyControlApi!.createApp(flags.name!, flags.tlsonly)
+      const apps: AblyApp[] = [app]
       CliUx.ux.table(apps as Record<string, any>[], {
         name: {
           header: 'Name',
