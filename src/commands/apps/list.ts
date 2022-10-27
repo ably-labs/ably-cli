@@ -6,7 +6,7 @@ export default class List extends CommandWithGlobalConfig {
   static description = 'List the Ably Applications'
 
   static examples = [
-    `$ ably apps:list
+    `$ ably apps list
 `,
   ]
 

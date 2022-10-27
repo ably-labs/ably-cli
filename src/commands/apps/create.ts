@@ -7,7 +7,7 @@ export default class Create extends CommandWithGlobalConfig {
   static description = 'Create an Ably Application'
 
   static examples = [
-    `$ ably apps:create
+    `$ ably apps create --name <value> [--tlsonly <value>]
 `,
   ]
 
