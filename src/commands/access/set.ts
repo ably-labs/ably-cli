@@ -4,24 +4,24 @@ import CommandWithGlobalConfig from '../command-with-global-config'
 export default class Set extends CommandWithGlobalConfig {
 	static description = 'Update the control key used by the Ably CLI'
 
-	static examples = [`$ ably access set --accountid <value> --controlkey <value>
+	static examples = [`$ ably access set --accountid <value> --accesstoken <value>
 `]
 
 static hidden = false
 
   static flags = {
     ...CommandWithGlobalConfig.flags,
-    accountid: Flags.string({description: 'The account ID', required: true}),
-    controlkey: Flags.string({description: 'The control API key', required: true}),
+    accountid: Flags.string({description: 'The Account ID', required: true}),
+    accesstoken: Flags.string({description: 'The Control API Access Token', required: true}),
   }
 
   async run(): Promise<void> {
     const {flags} = await this.parse(Set)
 
     this.globalConfig.accountId = flags.accountid
-    this.globalConfig.controlApiToken = flags.controlkey
+    this.globalConfig.controlApiToken = flags.accesstoken
 
-    this.log(`Control API key to be set to ${flags.accountid} ${flags.controlkey}`)
+    this.log(`Control API key to be set to ${flags.accountid} ${flags.accesstoken}`)
     await this.saveGlobalConfig()
   }
 }

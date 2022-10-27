@@ -1,4 +1,4 @@
-import { CliUx } from '@oclif/core'
+import {CliUx} from '@oclif/core'
 import CommandWithGlobalConfig from '../command-with-global-config'
 
 export default class Index extends CommandWithGlobalConfig {
@@ -23,7 +23,7 @@ static hidden = false
     this.log('Please follow these instructions to create an Access Token:')
     await CliUx.ux.url('https://ably.com/docs/control-api#authentication', 'https://ably.com/docs/control-api#authentication')
     this.log()
-    this.globalConfig.controlApiToken = await CliUx.ux.prompt('What is the Control API Access Token?')
+    this.globalConfig.controlApiToken = await CliUx.ux.prompt('What is the Access Token?')
 
     this.log('And the instructions here to get your Account ID:')
     await CliUx.ux.url('https://ably.com/docs/control-api#ids', 'https://ably.com/docs/control-api#ids')

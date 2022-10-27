@@ -1,4 +1,4 @@
-import { CliUx } from '@oclif/core'
+import {CliUx} from '@oclif/core'
 import CommandWithGlobalConfig from '../command-with-global-config'
 
 export default class Index extends CommandWithGlobalConfig {
@@ -30,7 +30,7 @@ export default class Index extends CommandWithGlobalConfig {
             minWidth: 10,
           },
           controlApiToken: {
-            header: 'Control API Token',
+            header: 'Control API Access Token',
             minWidth: 25,
           },
         },
