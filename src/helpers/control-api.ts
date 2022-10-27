@@ -1,4 +1,5 @@
 import {AblyApp} from './ably-app'
+const fetch = require('node-fetch')
 
 // const appApi = 'https://control.ably.net/v1/apps'
 const accountApi = 'https://control.ably.net/v1/accounts'

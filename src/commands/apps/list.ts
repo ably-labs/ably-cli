@@ -1,5 +1,4 @@
 import CommandWithGlobalConfig from '../command-with-global-config'
-import {AblyControlApi} from '../../helpers/control-api'
 
 export default class List extends CommandWithGlobalConfig {
   static description = 'List the Ably Applications'
@@ -17,10 +16,7 @@ export default class List extends CommandWithGlobalConfig {
     if (this.globalConfig === undefined) {
       this.log('Configuration not set')
     } else {
-      // TODO this needs to be moved so all commands can use it
-      const controlApi = new AblyControlApi(this.globalConfig.accountId!, this.globalConfig.controlApiToken!)
-      // TODO pipe to output
-      controlApi.listApps()
+      console.log((await this.ablyControlApi!.listApps()).map(app => app.name).sort())
     }
   }
 }

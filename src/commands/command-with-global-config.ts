@@ -3,6 +3,7 @@ import * as fs from 'fs-extra'
 import * as path from 'node:path'
 import {GlobalConfiguration} from '../global-config'
 import {ConsoleLogger, LogLevel} from '../helpers/console-logger'
+import {AblyControlApi} from '../helpers/control-api'
 
 export default abstract class CommandWithGlobalConfig extends Command {
   static flags = {
@@ -21,6 +22,7 @@ export default abstract class CommandWithGlobalConfig extends Command {
   } = {}
 
   globalConfig: GlobalConfiguration = new GlobalConfiguration()
+  ablyControlApi?: AblyControlApi = undefined
 
   protected logger: ConsoleLogger
 
@@ -36,6 +38,9 @@ export default abstract class CommandWithGlobalConfig extends Command {
     const configLocation = this.getConfigPath()
 
     await this.loadGlobalConfig(configLocation)
+    if (this.globalConfig.accountId && this.globalConfig.controlApiToken) {
+      this.ablyControlApi = new AblyControlApi(this.globalConfig.accountId!, this.globalConfig.controlApiToken!)
+    }
   }
 
   async run(): Promise<void> {

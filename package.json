@@ -20,7 +20,8 @@
     "@oclif/core": "^1.19.1",
     "@oclif/plugin-help": "^5",
     "@oclif/plugin-plugins": "^2.1.4",
-    "fs-extra": "^10.1.0"
+    "fs-extra": "^10.1.0",
+    "node-fetch": "^2.6.7"
   },
   "devDependencies": {
     "@oclif/test": "^2.2.4",
