@@ -1,4 +1,4 @@
-import { CliUx } from '@oclif/core'
+import {CliUx} from '@oclif/core'
 import CommandWithGlobalConfig from '../command-with-global-config'
 
 export default class List extends CommandWithGlobalConfig {
@@ -35,6 +35,11 @@ export default class List extends CommandWithGlobalConfig {
         },
         tlsOnly: {
           header: 'TLS Only',
+          minWidth: 10,
+        },
+        created: {
+          header: 'Created',
+          get: row => new Date(row.created).toUTCString(),
           minWidth: 10,
         },
       }, {
