@@ -11,6 +11,8 @@ export default class Create extends CommandWithGlobalConfig {
 `,
   ]
 
+  static hidden = false
+
   static flags = {
     ...CommandWithGlobalConfig.flags,
     name: Flags.string({

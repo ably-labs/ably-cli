@@ -10,6 +10,8 @@ export default class List extends CommandWithGlobalConfig {
 `,
   ]
 
+  static hidden = false
+
   static flags = {
     ...CommandWithGlobalConfig.flags,
     ...CliUx.ux.table.flags(),
