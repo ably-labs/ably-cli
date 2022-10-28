@@ -50,8 +50,11 @@
     ],
     "topicSeparator": " ",
     "topics": {
-      "hello": {
-        "description": "Say hello to the world and others"
+      "access": {
+        "description": "Set the Ably access token"
+      },
+      "apps": {
+        "description": "Manage Ably apps"
       }
     }
   },

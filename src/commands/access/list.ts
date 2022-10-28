@@ -1,11 +1,11 @@
 import {CliUx} from '@oclif/core'
 import CommandWithGlobalConfig from '../command-with-global-config'
 
-export default class Index extends CommandWithGlobalConfig {
+export default class List extends CommandWithGlobalConfig {
   static description = 'Ably CLI access control'
 
   static examples = [
-    `$ ably access
+    `$ ably access list
 `,
   ]
 
@@ -20,7 +20,7 @@ export default class Index extends CommandWithGlobalConfig {
     if (this.globalConfig === undefined) {
       this.log('Configuration not set')
     } else {
-      const {flags} = await this.parse(Index)
+      const {flags} = await this.parse(List)
 
       CliUx.ux.table(
         [this.globalConfig] as Record<string, any>[],
