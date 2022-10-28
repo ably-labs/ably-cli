@@ -1,48 +1,18 @@
 Ably CLI
 =================
 
-[![ably-cli](https://img.shields.io/badge/ably-cli-brightgreen.svg)](https://oclif.io)
+<!-- [![ably-cli](https://img.shields.io/badge/ably-cli-brightgreen.svg)](https://oclif.io)
 [![Version](https://img.shields.io/npm/v/ably-cli.svg)](https://npmjs.org/package/ably-cli)
 [![CircleCI](https://circleci.com/gh/ably-labs/ably-cli/tree/main.svg?style=shield)](https://circleci.com/gh/oclif/ably-cli/tree/main)
 [![Downloads/week](https://img.shields.io/npm/dw/ably-cli.svg)](https://npmjs.org/package/ably-cli)
-[![License](https://img.shields.io/npm/l/ably-cli.svg)](https://github.com/ably-labs/ably-cli/blob/main/package.json)
+[![License](https://img.shields.io/npm/l/ably-cli.svg)](https://github.com/ably-labs/ably-cli/blob/main/package.json) -->
 
-// This is a template repository to be used for all Ably Labs demos, tools &amp; proof of concepts. Follow these steps to so this repo is easy to use for visitors & maintainers.
-
-1. Update the description of this repo.
-2. Add [topics](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/classifying-your-repository-with-topics) to this repo to clarify the language, tech stack and use case.
-3. ~~Update the [.gitignore](.gitignore) file with one of the [standard templates from GitHub](https://github.com/github/gitignore).~~
-4. Update [dependabot.yml](.github/dependabot.yml) with the [configuration for your project](https://docs.github.com/en/code-security/supply-chain-security/keeping-your-dependencies-updated-automatically/configuration-options-for-dependency-updates).
-5. ~~Replace `https://github.com/ably-labs/ably-labs-template-repo/issues` with the actual link of the repo in the [CONTRIBUTING.md](CONTRIBUTING.md) file.~~
-6. Update this README so it provides enough information for people to understand how it works, how to run it locally and how it can be deployed to the cloud (see [GitHub](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes)).
-7. Update the query string in the static asset link:
-  - For the logo at the bottom of this README and
-  - Please use a custom `favicon` if you're creating a web app. The favicon should use the ably static asset endpoint `<link rel="icon" type="image/svg+xml" href="https://static.ably.dev/motif-red.svg?lorem-ipsum" />` and ensure this uses the same unique identifier as the Ably logo on the README.
-  - More info in [this repo](https://github.com/ably-labs/static-assets).
-8. Add a GitHub workflow to build/test/deploy your application. Use the [Ably Control API GitHub action](https://github.com/ably-labs/ably-control-api-action) to avoid creating Ably apps/API keys manually (see the `create-infra.yml` workflow in this repo).
-9. Add this repository to the [selected repositories in the Ably Labs org](https://github.com/organizations/ably-labs/settings/actions) that are allowed to run GitHub Actions.
-
-Once you're done, remove this section from the README. Good luck! 💪
-
----
-
-![Place eye candy header image here](https://placekitten.com/640/360)
-
-*// Place eye candy header image here ⬆️*
 
 ## Description
 
-// Explanation of the contents of the repository. Describe the use case.
+The [Ably](https://ably.com?utm_source=github&utm_medium=github-repo&utm_campaign=GLB-2210-ably-cli&utm_content=ably-cli&src=GLB-2210-ably-cli-github-repo) CLI built on [Oclif](https://oclif.io/).
 
-![A high level architecture diagram tells more than a 1000 words](https://placekitten.com/480/240)
-
-*// A high level architecture diagram tells more than a 1000 words ⬆️*
-
-The project uses the following components:
-
-- [X](), brief explanation of the component
-- [Y](), brief explanation of the component
-- [Ably](https://ably.com/), for realtime messaging at scale.
+🚧 This is a **Work in Progress** 🚧 
 
 <!-- toc -->
 * [Usage](#usage)
@@ -55,7 +25,7 @@ $ npm install -g ably-cli
 $ ably COMMAND
 running command...
 $ ably (--version)
-ably-cli/0.0.0 darwin-arm64 node-v17.4.0
+ably-cli/0.0.0 darwin-arm64 node-v19.0.0
 $ ably --help [COMMAND]
 USAGE
   $ ably COMMAND
@@ -64,8 +34,11 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
-* [`ably hello PERSON`](#ably-hello-person)
-* [`ably hello world`](#ably-hello-world)
+* [`ably access`](#ably-access)
+* [`ably access list`](#ably-access-list)
+* [`ably access set`](#ably-access-set)
+* [`ably apps create`](#ably-apps-create)
+* [`ably apps list`](#ably-apps-list)
 * [`ably help [COMMAND]`](#ably-help-command)
 * [`ably plugins`](#ably-plugins)
 * [`ably plugins:install PLUGIN...`](#ably-pluginsinstall-plugin)
@@ -77,44 +50,135 @@ USAGE
 * [`ably plugins:uninstall PLUGIN...`](#ably-pluginsuninstall-plugin-2)
 * [`ably plugins update`](#ably-plugins-update)
 
-## `ably hello PERSON`
+## `ably access`
 
-Say hello
+Provides instructions for setting up access for the Ably CLI
 
 ```
 USAGE
-  $ ably hello [PERSON] -f <value>
-
-ARGUMENTS
-  PERSON  Person to say hello to
+  $ ably access [--debug] [--help]
 
 FLAGS
-  -f, --from=<value>  (required) Who is saying hello
+  --debug  Enables debug logging for the CLI
+  --help   Show CLI help.
 
 DESCRIPTION
-  Say hello
+  Provides instructions for setting up access for the Ably CLI
 
 EXAMPLES
-  $ oex hello friend --from oclif
-  hello friend from oclif! (./src/commands/hello/index.ts)
+  $ ably access
 ```
 
-_See code: [dist/commands/hello/index.ts](https://github.com/ably-labs/ably-cli/blob/v0.0.0/dist/commands/hello/index.ts)_
+_See code: [dist/commands/access/index.ts](https://github.com/ably-labs/ably-cli/blob/v0.0.0/dist/commands/access/index.ts)_
 
-## `ably hello world`
+## `ably access list`
 
-Say hello world
+Ably CLI access control
 
 ```
 USAGE
-  $ ably hello world
+  $ ably access list [--debug] [--help] [--columns <value> | -x] [--sort <value>] [--filter <value>] [--output
+    csv|json|yaml |  | [--csv | --no-truncate]] [--no-header | ]
+
+FLAGS
+  -x, --extended     show extra columns
+  --columns=<value>  only show provided columns (comma-separated)
+  --csv              output is csv format [alias: --output=csv]
+  --debug            Enables debug logging for the CLI
+  --filter=<value>   filter property by partial string matching, ex: name=foo
+  --help             Show CLI help.
+  --no-header        hide table header from output
+  --no-truncate      do not truncate output to fit screen
+  --output=<option>  output in a more machine friendly format
+                     <options: csv|json|yaml>
+  --sort=<value>     property to sort by (prepend '-' for descending)
 
 DESCRIPTION
-  Say hello world
+  Ably CLI access control
 
 EXAMPLES
-  $ ably hello world
-  hello world! (./src/commands/hello/world.ts)
+  $ ably access list
+```
+
+## `ably access set`
+
+Update the control key used by the Ably CLI
+
+```
+USAGE
+  $ ably access set --accountid <value> --accesstoken <value> [--debug] [--help]
+
+FLAGS
+  --accesstoken=<value>  (required) The Control API Access Token
+  --accountid=<value>    (required) The Account ID
+  --debug                Enables debug logging for the CLI
+  --help                 Show CLI help.
+
+DESCRIPTION
+  Update the control key used by the Ably CLI
+
+EXAMPLES
+  $ ably access set --accountid <value> --accesstoken <value>
+```
+
+## `ably apps create`
+
+Create an Ably Application
+
+```
+USAGE
+  $ ably apps create --name <value> [--debug] [--help] [--tlsonly] [--columns <value> | -x] [--sort <value>]
+    [--filter <value>] [--output csv|json|yaml |  | [--csv | --no-truncate]] [--no-header | ]
+
+FLAGS
+  -x, --extended     show extra columns
+  --columns=<value>  only show provided columns (comma-separated)
+  --csv              output is csv format [alias: --output=csv]
+  --debug            Enables debug logging for the CLI
+  --filter=<value>   filter property by partial string matching, ex: name=foo
+  --help             Show CLI help.
+  --name=<value>     (required) Name of the Ably app
+  --no-header        hide table header from output
+  --no-truncate      do not truncate output to fit screen
+  --output=<option>  output in a more machine friendly format
+                     <options: csv|json|yaml>
+  --sort=<value>     property to sort by (prepend '-' for descending)
+  --tlsonly          Only use TLS connections
+
+DESCRIPTION
+  Create an Ably Application
+
+EXAMPLES
+  $ ably apps create --name <value> [--tlsonly <value>]
+```
+
+## `ably apps list`
+
+List the Ably Applications
+
+```
+USAGE
+  $ ably apps list [--debug] [--help] [--columns <value> | -x] [--sort <value>] [--filter <value>] [--output
+    csv|json|yaml |  | [--csv | --no-truncate]] [--no-header | ]
+
+FLAGS
+  -x, --extended     show extra columns
+  --columns=<value>  only show provided columns (comma-separated)
+  --csv              output is csv format [alias: --output=csv]
+  --debug            Enables debug logging for the CLI
+  --filter=<value>   filter property by partial string matching, ex: name=foo
+  --help             Show CLI help.
+  --no-header        hide table header from output
+  --no-truncate      do not truncate output to fit screen
+  --output=<option>  output in a more machine friendly format
+                     <options: csv|json|yaml>
+  --sort=<value>     property to sort by (prepend '-' for descending)
+
+DESCRIPTION
+  List the Ably Applications
+
+EXAMPLES
+  $ ably apps list
 ```
 
 ## `ably help [COMMAND]`
@@ -370,17 +434,17 @@ DESCRIPTION
 
 ## Tech stack
 
+// TODO
+
 ## Building & running locally
 
 ### Prerequisites
 
-1. [Sign up](https://ably.com/signup) or [log in](https://ably.com/login) to ably.com, and [create a new app and copy the API key](https://faqs.ably.com/setting-up-and-managing-api-keys).
-2. Install X
-3. Install Y
+Node.JS
 
 ### Building the project
 
-// Add step by step instructions for building & running locally.
+// TODO: Add step by step instructions for building & running locally.
 
 ## Contributing
 
@@ -388,12 +452,27 @@ Want to help contributing to this project? Have a look at our [contributing guid
 
 ## More info
 
-// Add links to related blog, video, personal twitter handle.
-
 - [Join our Discord server](https://discord.gg/q89gDHZcBK)
 - [Follow us on Twitter](https://twitter.com/ablyrealtime)
 - [Use our SDKs](https://github.com/ably/)
-- [Visit our website](https://ably.com)
+- [Visit our website](https://ably.com?utm_source=github&utm_medium=github-repo&utm_campaign=GLB-2210-ably-cli&utm_content=ably-cli&src=GLB-2210-ably-cli-github-repo)
 
 ---
-[![Ably logo](https://static.ably.dev/badge-black.svg?ably-labs-template-repo)](https://ably.com)
+
+## TODOs
+
+1. Update the description of this repo.
+2. Add [topics](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/classifying-your-repository-with-topics) to this repo to clarify the language, tech stack and use case.
+3. ~~Update the [.gitignore](.gitignore) file with one of the [standard templates from GitHub](https://github.com/github/gitignore).~~
+4. Update [dependabot.yml](.github/dependabot.yml) with the [configuration for your project](https://docs.github.com/en/code-security/supply-chain-security/keeping-your-dependencies-updated-automatically/configuration-options-for-dependency-updates).
+5. ~~Replace `https://github.com/ably-labs/ably-labs-template-repo/issues` with the actual link of the repo in the [CONTRIBUTING.md](CONTRIBUTING.md) file.~~
+6. Update this README so it provides enough information for people to understand how it works, how to run it locally and how it can be deployed to the cloud (see [GitHub](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes)).
+7. Update the query string in the static asset link:
+  - For the logo at the bottom of this README and
+  - Please use a custom `favicon` if you're creating a web app. The favicon should use the ably static asset endpoint `<link rel="icon" type="image/svg+xml" href="https://static.ably.dev/motif-red.svg?lorem-ipsum" />` and ensure this uses the same unique identifier as the Ably logo on the README.
+  - More info in [this repo](https://github.com/ably-labs/static-assets).
+8. Add a GitHub workflow to build/test/deploy your application. Use the [Ably Control API GitHub action](https://github.com/ably-labs/ably-control-api-action) to avoid creating Ably apps/API keys manually (see the `create-infra.yml` workflow in this repo).
+9. Add this repository to the [selected repositories in the Ably Labs org](https://github.com/organizations/ably-labs/settings/actions) that are allowed to run GitHub Actions.
+
+---
+[![Ably logo](https://static.ably.dev/badge-black.svg?ably-labs-template-repo)](https://?utm_source=github&utm_medium=github-repo&utm_campaign=GLB-2210-ably-cli&utm_content=ably-cli&src=GLB-2210-ably-cli-github-repo)
