@@ -12,7 +12,7 @@ Ably CLI
 
 The [Ably](https://ably.com?utm_source=github&utm_medium=github-repo&utm_campaign=GLB-2210-ably-cli&utm_content=ably-cli&src=GLB-2210-ably-cli-github-repo) CLI built on [Oclif](https://oclif.io/).
 
-🚧 This is a **Work in Progress** 🚧 
+🚧 This is a **Work in Progress** and has not yet been deployed to NPM 🚧 
 
 <!-- toc -->
 * [Usage](#usage)
