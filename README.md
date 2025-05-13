@@ -1,5 +1,12 @@
-Ably CLI
-=================
+Ably CLI is at https://github.com/ably/cli
+======
+
+> [!CAUTION]
+> This is not the **ably-cli**. This is an old experimental project which is not under active development.
+> 
+> If you're looking for the ably-cli, it is available at https://github.com/ably/cli
+
+# This project
 
 <!-- [![ably-cli](https://img.shields.io/badge/ably-cli-brightgreen.svg)](https://oclif.io)
 [![Version](https://img.shields.io/npm/v/ably-cli.svg)](https://npmjs.org/package/ably-cli)
@@ -10,9 +17,9 @@ Ably CLI
 
 ## Description
 
-The [Ably](https://ably.com?utm_source=github&utm_medium=github-repo&utm_campaign=GLB-2210-ably-cli&utm_content=ably-cli&src=GLB-2210-ably-cli-github-repo) CLI built on [Oclif](https://oclif.io/).
+Built on [Oclif](https://oclif.io/).
 
-🚧 This is a **Work in Progress** and has not yet been deployed to NPM 🚧 
+🚧 This is an experimental repository and it is NOT actively developed. If you're looking for the ably-cli it is at https://github.com/ably/cli 🚧 
 
 <!-- toc -->
 * [Usage](#usage)
