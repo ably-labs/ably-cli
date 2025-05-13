@@ -2,8 +2,6 @@ Ably CLI is at https://github.com/ably/cli
 ======
 
 > [!CAUTION]
-> This is not the **ably-cli**. This is an old experimental project which is not under active development.
-> 
 > If you're looking for the ably-cli, it is available at https://github.com/ably/cli
 
 # This project
